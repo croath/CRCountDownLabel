@@ -91,8 +91,8 @@
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] init];
     
     NSMutableParagraphStyle * numberStyle = [[NSMutableParagraphStyle alloc] init];
-    numberStyle.lineBreakMode = NSLineBreakByWordWrapping;
-    numberStyle.alignment = NSTextAlignmentCenter;
+    numberStyle.lineBreakMode = self.lineBreakMode;
+    numberStyle.alignment = self.textAlignment;
     
     NSAttributedString *hourAttrStr = [[NSAttributedString alloc] initWithString:hourStr attributes:
                                        @{NSFontAttributeName:self.letterFont,
